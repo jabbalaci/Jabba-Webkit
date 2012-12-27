@@ -6,6 +6,7 @@ Jabba's headless webkit browser for scraping AJAX-powered webpages.
 * Author: Laszlo Szathmary, 2012 (<jabba.laci@gmail.com>)
 * Blog post: <http://ubuntuincident.wordpress.com/2012/12/27/scraping-ajax-web-pages-part-4/>
 * GitHub: <https://github.com/jabbalaci/Jabba-Webkit>
+* Reddit: <http://www.reddit.com/r/Python/comments/15ir6x>
 
 Usage:
 ------
