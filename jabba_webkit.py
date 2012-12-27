@@ -24,6 +24,8 @@ You can also use it as a library:
 # import jabba_webkit as jw
 """
 
+__version__ = '20121227'
+
 import os
 import sys
 
