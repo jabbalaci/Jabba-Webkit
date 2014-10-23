@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+from __future__ import (absolute_import, division,
+                        print_function, unicode_literals)
+
 """
 Jabba's headless webkit browser for scraping AJAX-powered webpages.
 
@@ -24,7 +27,7 @@ You can also use it as a library:
 # import jabba_webkit as jw
 """
 
-__version__ = '20121227'
+__version__ = '20141023'
 
 import os
 import sys
@@ -34,7 +37,7 @@ from PySide.QtGui import *
 from PySide.QtWebKit import QWebPage
 
 SEC = 1000    # 1 sec. is 1000 msec.
-USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:17.0) Gecko/20100101 Firefox/17.0'
+USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:33.0) Gecko/20100101 Firefox/33.0'
 
 
 class JabbaWebkit(QWebPage):
@@ -73,18 +76,19 @@ def get_page(url, wait=None):
 
 if __name__ == "__main__":
 #    url = 'http://simile.mit.edu/crowbar/test.html'
-#    print get_html(url)
+#    print(get_html(url))
 
 #    url = 'http://www.ncbi.nlm.nih.gov/nuccore/CP002059.1'    # wait 30 seconds
-#    print get_html(url, 30)
+#    print(get_html(url, 30))
 
     try:
         if len(sys.argv) == 3:
-            print get_page(sys.argv[1], int(sys.argv[2]))
+            print(get_page(sys.argv[1], int(sys.argv[2])))
         elif len(sys.argv) == 2:
-            print get_page(sys.argv[1])
+            print(get_page(sys.argv[1]))
         else:
             raise ValueError
     except ValueError:
-        print "Usage: {0} <url> [<time_in_sec>]".format(os.path.basename(sys.argv[0]))
+        print("Usage: {0} <url> [<time_in_sec>]"
+              .format(os.path.basename(sys.argv[0])))
         sys.exit(1)

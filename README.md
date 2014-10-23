@@ -14,7 +14,7 @@ Usage:
 
 `url`: the page whose source you want to get
 
-`time`: The application will quit after this given time (in seconds).
+`time`: The application will quit after this given time (in seconds)
 
 If the webpage is AJAX-powered and updates itself, you can
 tell this browser to wait X seconds. Then it fetches the
